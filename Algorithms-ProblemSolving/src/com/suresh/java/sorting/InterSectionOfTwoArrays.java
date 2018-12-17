@@ -29,7 +29,7 @@ public class InterSectionOfTwoArrays {
     int i = 0;
     int j = 0;
     while (i < arrayOne.length && j < arrayTwo.length) {
-      if (arrayOne[i] == arrayTwo[j]) {
+      if ((arrayOne[i] == arrayTwo[j]) && (i > 0 && arrayOne[i] != arrayOne[i - 1])) {
         list.add(arrayOne[i]);
         i++;
         j++;
