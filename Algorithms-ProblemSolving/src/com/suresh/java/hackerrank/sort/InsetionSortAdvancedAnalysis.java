@@ -68,6 +68,8 @@ public class InsetionSortAdvancedAnalysis {
    *          mid point of input array.
    * @param high
    *          end point of input array.
+   * @param return
+   *          it will return number of inversion in array.
    */
   private static int merge(int[] array, int[] aux, int low, int mid, int high) {
     int inversionsCount = 0;
