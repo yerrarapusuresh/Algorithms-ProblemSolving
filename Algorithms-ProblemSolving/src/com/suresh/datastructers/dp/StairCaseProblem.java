@@ -9,12 +9,31 @@ package com.suresh.datastructers.dp;
  */
 public class StairCaseProblem {
 
+  public static int climbStairs(int a) {
+    if (a <= 0)
+      return 0;
+    if (a == 1)
+      return 1;
+    if (a == 2)
+      return 2;
+
+    int[] array = new int[a + 1];
+    array[0] = 0;
+    array[1] = 1;
+    array[2] = 2;
+    for (int i = 3; i <= a; i++) {
+      array[i] = array[i - 1] + array[i - 2];
+    }
+
+    return array[a];
+  }
+
   /**
    * @param args
    */
   public static void main(String[] args) {
     stepPerms(5);
-
+    System.out.println(climbStairs(4));
   }
 
   // Complete the stepPerms function below.
